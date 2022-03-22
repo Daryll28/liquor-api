@@ -1,31 +1,49 @@
-GET http://localhost:3120/users
+GET http://localhost:3110/users
 
 
 ###
-GET http://localhost:3120/users/622f42d9d6ca5ccffe34d79a
+GET http://localhost:3110/users/623068c956702b5679d1c595
 
 
 
 ###
-POST http://localhost:3120/users
+POST http://localhost:3110/users
 Content-Type: application/json
 
 {
-"name": "Daryll Grainger",
-"contact": "0681323110",
-"email": "Daryllgrainger28z@gmail.com",
-"password": "bigpoes"
+"name": "AAAAAAAB",
+"email": "AAAAAAAAAAB@gmail.com",
+"password": "AAAAAAaB",
+"contact": "082232219"
+
 }
 
 ###
 
-DELETE http://localhost:3120/users/622f3c208a31b138956bfa80
+
 
 ###
 
-PATCH http://localhost:3120/users/622f4c33902d5af0b51f4a1b
+DELETE http://localhost:3110/users/623068c956702b5679d1c595
+
+###
+
+PUT http://localhost:3110/users/62397aa0b50f1cb282574212
 Content-Type: application/json
 
 {
-    "contact": "1234567890"
+    "name": "Johnathan"
+}
+#####
+//FOR THE REGISTERING
+######
+
+PATCH http://localhost:3110/users/login
+Content-Type: application/json
+
+{
+
+"email": "AAAAAAAAAAB@gmail.com",
+
+"password": "AAAAAAaB"
 }
