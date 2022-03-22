@@ -17,7 +17,9 @@ app.use(express.json())
 app.use('/users', usersRouter)
 app.use('/users/auth', authRouter)
 
-
+app.get('/', (req, res) =>{
+    res.send("Yooo")
+})
 
 
 
