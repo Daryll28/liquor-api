@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const {stringify} = require('nodemon/lib/utils')
+
 
 const UserSchema = new mongoose.Schema({
     name: {type: String,required: true},
