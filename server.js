@@ -1,6 +1,7 @@
-// require('dotenv/config')
+require('dotenv/config')
 const express = require('express')
 const app = express()
+const cors = require("cors")
 const mongoose = require('mongoose')
 const usersRouter = require('./routes/users')
 const authRouter = require('./Middleware/auth')
@@ -16,6 +17,7 @@ db.once('open', () => console.log('database is connected'))
 app.use(express.json())
 app.use('/users', usersRouter)
 app.use('/users/auth', authRouter)
+app.use(cors());
 
 app.get('/', (req, res) =>{
     res.send("Connected to database")

@@ -11,10 +11,10 @@ POST http://localhost:3110/users
 Content-Type: application/json
 
 {
-"name": "AAAAAAAB",
-"email": "AAAAAAAAAAB@gmail.com",
-"password": "AAAAAAaB",
-"contact": "082232219"
+"name": "Daryll",
+"email": "daryllgrainger28@gmail.com",
+"password": "hellohi",
+"contact": "0681323110"
 
 }
 
