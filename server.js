@@ -18,7 +18,7 @@ app.use('/users', usersRouter)
 app.use('/users/auth', authRouter)
 
 app.get('/', (req, res) =>{
-    res.send("Yooo")
+    res.send("Connected to database")
 })
 
 
