@@ -80,7 +80,7 @@ router.post("/login", async (req, res, next) => {
   
   const { email, password } = req.body;
   const user = await User.findOne({ email });
-  
+
   console.log(user);
 
   if (!user) return res.status(404).json({ message: "Could not find user" });
@@ -129,7 +129,7 @@ router.put('/:id', getUser, async (req, res) => {
 
 
   // REGISTER a user
-  router.post("/", async (req, res, next) => {
+  router.post("/register", async (req, res, next) => {
     const { name, email, password, contact} = req.body;
   
     const salt = await bcrypt.genSalt();
