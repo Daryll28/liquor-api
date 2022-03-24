@@ -1,4 +1,4 @@
-GET http://localhost:3110/users
+GET http://localhost:3130/users
 
 
 ###
@@ -20,13 +20,13 @@ Content-Type: application/json
 
 ####
 
-POST http://localhost:3110/products
+POST http://localhost:3130/users/login
 Content-Type: application/json
 
 {
-"name": "Jameson",
-"email": "daryllgrainger28@gmail.com",
-"password": "hellohi",
+"name": "James",
+"email": "james28@gmail.com",
+"password": "james",
 "contact": "0681323110"
 
 }
