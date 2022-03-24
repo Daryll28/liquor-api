@@ -5,7 +5,7 @@ const cors = require("cors")
 const mongoose = require('mongoose')
 const usersRouter = require('./routes/users')
 const authRouter = require('./Middleware/auth')
-
+const productRouter = require('./routes/productRouter')
 
 
 
@@ -17,15 +17,16 @@ db.once('open', () => console.log('database is connected'))
 app.use(express.json())
 app.use('/users', usersRouter)
 app.use('/users/auth', authRouter)
+app.use('/products', productRouter)
 app.use(cors());
 
 app.get('/', (req, res) =>{
-    res.send("Connected to database")
+    res.send("Welcome to my Liquor Store api")
 })
 
 
 
 
-app.set('port', process.env.PORT || 3110)
+app.set('port', process.env.PORT || 3130)
 
 app.listen(app.get('port'), () => console.log(`Backend server is running on port ${app.get('port')}`))

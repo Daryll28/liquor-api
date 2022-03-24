@@ -1,8 +1,8 @@
 require("dotenv").config;
 const express = require("express");
 const Product = require("../models/Product");
-const auth = require("../middleware/auth");
-const { getProduct } = require("../middleware/getProduct");
+const auth = require("../Middleware/auth");
+const { getProduct } = require("../Middleware/getProduct");
 
 const router = express.Router();
 
@@ -32,14 +32,14 @@ router.post("/products", auth, async (req, res, next) => {
         name,
         price,
         category,
-        author: req.user._id,
+        // author: req.user._id,
         img,
       }))
     : (product = new Product({
       name,
       price,
       category,
-        author: req.user._id,
+        // author: req.user._id,
       }));
 
   try {

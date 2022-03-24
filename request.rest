@@ -7,11 +7,24 @@ GET http://localhost:3110/users/623068c956702b5679d1c595
 
 
 ###
-POST http://localhost:3110/users
+POST http://localhost:3130/products
 Content-Type: application/json
 
 {
-"name": "Daryll",
+"name": "Jameson",
+"price": 200,
+"categories": "Whiskey",
+"img": "https://charleroi-duty-free.com/media/catalog/product/j/a/jameson-irish-whiskey-400_2.jpg"
+
+}
+
+####
+
+POST http://localhost:3110/products
+Content-Type: application/json
+
+{
+"name": "Jameson",
 "email": "daryllgrainger28@gmail.com",
 "password": "hellohi",
 "contact": "0681323110"
