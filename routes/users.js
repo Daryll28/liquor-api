@@ -83,7 +83,7 @@ router.post("/login", async (req, res, next) => {
 
   console.log(user);
 
-  if (!user) res.status(404).json({ message: "Could not find user" });
+  if (!user) return res.status(404).json({ message: "Could not find user" });
   if (await bcrypt.compare(password, user.password)) {
     try {
       console.log(process.env.JWT_SECRET_KEY)
