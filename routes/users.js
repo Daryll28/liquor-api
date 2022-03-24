@@ -59,7 +59,7 @@ router.post('/', async (req, res) => {
 
 
 // LOGIN user with email + password
-router.patch("/login", async (req, res, next) => {
+router.post("/login", async (req, res, next) => {
 
   // try{
   //     const user = await User.findOne({ user: req.body.user});
