@@ -7,7 +7,7 @@ const { getProduct } = require("../Middleware/getProduct");
 const router = express.Router();
 
 // GET all products
-router.get("/products", auth, async (req, res) => {
+router.get("/products", async (req, res) => {
   try {
     const products = await Product.find();
     res.status(201).send(products);
@@ -22,23 +22,25 @@ router.get("/products/:id", [auth, getProduct], (req, res, next) => {
 });
 
 // CREATE a product
-router.post("/products", auth, async (req, res, next) => {
-  const { name, price, category, img } = req.body;
+router.post("/products", async (req, res, next) => {
+  console.log("product passed here")
+  const { name, category, img, price } = req.body;
 
   let product;
 
   img
     ? (product = new Product({
         name,
-        price,
         category,
-        // author: req.user._id,
+        
         img,
+        price,
       }))
     : (product = new Product({
-      name,
-      price,
+      name,      
       category,
+      img,
+      price,
         // author: req.user._id,
       }));
 
