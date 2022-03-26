@@ -6,6 +6,7 @@ const mongoose = require('mongoose')
 const usersRouter = require('./routes/users')
 const authRouter = require('./Middleware/auth')
 const productRouter = require('./routes/productRouter')
+const contactRoute = require('./routes/contactRoute')
 
 
 
@@ -23,7 +24,7 @@ app.use(cors());
 app.use('/users', usersRouter)
 app.use('/users/auth', authRouter)
 app.use('/products', productRouter)
-
+app.use('/contact', contactRoute)
 app.get('/', (req, res) =>{
     res.send("Welcome to my Liquor Store api")
 })

@@ -11,10 +11,10 @@ POST http://localhost:3130/products
 Content-Type: application/json
 
 {
-"name": "Jameson",
-"price": 200,
-"categories": "Whiskey",
-"img": "https://charleroi-duty-free.com/media/catalog/product/j/a/jameson-irish-whiskey-400_2.jpg"
+"name": "jack daniels",
+"price": 2200,
+"category": "Whi2skey",
+"img": "https://charlero5i-duty-free.com/media/catalog/product/j/a/jameson-irish-whiskey-400_2.jpg"
 
 }
 
@@ -37,7 +37,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3110/users/623068c956702b5679d1c595
+GET http://localhost:3130/products/623d6da6354809eb1df39c74
 
 ###
 
@@ -75,3 +75,18 @@ Content-Type: application/json
     "password":"hellewfweqfohi"
 
 }
+
+####
+
+POST http://localhost:3130/contact
+Content-Type: application/json
+
+{
+    "firstName": "daryll",
+    "lastName": "grainger",
+    "email": "jsiahdjk@gmail.com",
+    "message": "i miss you"
+
+}
+
+

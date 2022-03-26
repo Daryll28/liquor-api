@@ -7,7 +7,7 @@ const { getProduct } = require("../Middleware/getProduct");
 const router = express.Router();
 
 // GET all products
-router.get("/products", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const products = await Product.find();
     res.status(201).send(products);
@@ -22,7 +22,7 @@ router.get("/products/:id", [auth, getProduct], (req, res, next) => {
 });
 
 // CREATE a product
-router.post("/products", async (req, res, next) => {
+router.post("/", async (req, res, next) => {
   console.log("product passed here")
   const { name, category, img, price } = req.body;
 
@@ -53,8 +53,8 @@ router.post("/products", async (req, res, next) => {
 });
 
 // UPDATE a product
-router.put("/products/:id", [auth, getProduct], async (req, res, next) => {
-  if (req.user._id !== res.product.author)
+router.put("/:id", [auth, getProduct], async (req, res, next) => {
+  if (req.user._id !== res.product.created_by)
     res
       .status(400)
       .json({ message: "You do not have the permission to update this product" });
@@ -73,7 +73,7 @@ router.put("/products/:id", [auth, getProduct], async (req, res, next) => {
 });
 
 // DELETing a product 
-router.delete("/products/:id", [auth, getProduct], async (req, res, next) => {
+router.delete("/:id", [auth, getProduct], async (req, res, next) => {
   if (req.user._id !== res.product.author)
     res
       .status(400)
