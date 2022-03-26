@@ -60,24 +60,7 @@ router.post('/', async (req, res) => {
 
 // LOGIN user with email + password
 router.post("/login", async (req, res, next) => {
-
-  // try{
-  //     const user = await User.findOne({ user: req.body.user});
-  //     !user && res.status(401).json("Wrong Credentials")
-      
-  //     const hashedPassword = bcrypt.compare(
-  //         user.password,
-  //         process.env.SECRET_TOKEN
-  //     );
-  //     const password = hashedPassword.toString(bcrypt)
-
-  //     password !==req.body.password && res.status(401).json("Wrong Credentials")
-
-  //     res.status(200).json(user)
-  // } catch (err) {
-  //     res.status(500).json(err);
-  // }
-  
+ 
   const { email, password } = req.body;
   const user = await User.findOne({ email });
 

@@ -32,6 +32,6 @@ app.get('/', (req, res) =>{
 
 
 
-app.set('port', process.env.PORT || 3130)
+app.set('port', process.env.PORT || 3100)
 
 app.listen(app.get('port'), () => console.log(`Backend server is running on port ${app.get('port')}`))
