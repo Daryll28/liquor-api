@@ -7,11 +7,11 @@ async function getProduct(req, res, next) {
     try {
       product = await Product.findById(req.params.id);
 
-      if (!user) res.status(404).json({ message: "Could not find user" });
+      if (!product) res.status(404).json({ message: "Could not find product" });
     } catch (error) {
       res.status(500).json({ message: error.message });
     }
-    res.user = user;
+    res.product = product;
     return next();
   }
 

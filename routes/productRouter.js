@@ -32,7 +32,6 @@ router.post("/", async (req, res, next) => {
     ? (product = new Product({
         name,
         category,
-        
         img,
         price,
       }))
@@ -73,8 +72,8 @@ router.put("/:id", [auth, getProduct], async (req, res, next) => {
 });
 
 // DELETing a product 
-router.delete("/:id", [auth, getProduct], async (req, res, next) => {
-  if (req.user._id !== res.product.author)
+router.delete("/:id", [ getProduct], async (req, res, next) => {
+  if (req.user._id !== res.product._id)
     res
       .status(400)
       .json({ message: "You do not have the permission to delete this product" });

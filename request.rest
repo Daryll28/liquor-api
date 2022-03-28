@@ -7,13 +7,13 @@ GET http://localhost:3110/users/623068c956702b5679d1c595
 
 
 ###
-POST http://localhost:3130/products
+POST http://localhost:3100/products/6241a2269ff0fbbd61173fb0
 Content-Type: application/json
 
 {
-"name": "jack daniels",
-"price": 2200,
-"category": "Whi2skey",
+"name": "Smirnoff",
+"price": 170,
+"category": "Vodka",
 "img": "https://charlero5i-duty-free.com/media/catalog/product/j/a/jameson-irish-whiskey-400_2.jpg"
 
 }
@@ -89,4 +89,6 @@ Content-Type: application/json
 
 }
 
+####
+DELETE http://localhost:3100/products/6241a2089ff0fbbd61173fae
 
